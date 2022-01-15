@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/root_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MistakeFragment">
+
+    <TextView
+        android:id="@+id/word"
+        style="@style/word_style"
+        android:fontFamily="@font/roboto_medium"
+        tools:text="WORD"
+        app:layout_constraintBottom_toTopOf="@id/synonym1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/synonym1"
+        style="@style/synonym_style"
+        tools:text="WORD"
+        app:layout_constraintBottom_toTopOf="@id/synonym2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/word" />
+
+    <TextView
+        android:id="@+id/synonym2"
+        style="@style/synonym_style"
+        tools:text="WORD"
+        app:layout_constraintTop_toBottomOf="@id/synonym1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/synonym3" />
+
+    <TextView
+        android:id="@+id/synonym3"
+        style="@style/synonym_style"
+        tools:text="WORD"
+        app:layout_constraintTop_toBottomOf="@id/synonym2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/synonym4" />
+
+    <TextView
+        android:id="@+id/synonym4"
+        style="@style/synonym_style"
+        tools:text="WORD"
+        app:layout_constraintTop_toBottomOf="@id/synonym3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/synonym5" />
+
+    <TextView
+        android:id="@+id/synonym5"
+        style="@style/synonym_style"
+        tools:text="WORD"
+        app:layout_constraintTop_toBottomOf="@id/synonym4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

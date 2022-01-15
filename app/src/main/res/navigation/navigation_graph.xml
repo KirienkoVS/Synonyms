@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/synonymsFragment">
+
+    <fragment
+        android:id="@+id/synonymsFragment"
+        android:name="com.example.synonyms.SynonymsFragment"
+        android:label="fragment_synonyms"
+        tools:layout="@layout/fragment_synonyms" >
+        <action
+            android:id="@+id/action_synonymsFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.synonyms.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_resultsFragment_to_synonymsFragment"
+            app:destination="@id/synonymsFragment"
+            app:popUpTo="@id/synonymsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_resultsFragment_to_mistakeFragment"
+            app:destination="@id/mistakeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mistakeFragment"
+        android:name="com.example.synonyms.MistakeFragment"
+        android:label="fragment_mistake"
+        tools:layout="@layout/fragment_mistake" >
+        <action
+            android:id="@+id/action_mistakeFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:popUpTo="@id/resultsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="mistake"
+            app:argType="string" />
+    </fragment>
+</navigation>
